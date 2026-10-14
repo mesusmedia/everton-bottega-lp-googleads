@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script src="https://track.mesusmedia.com.br/api/tag/C140-EspacoBottega" async></script>
 <!-- Traqueamento criativivo -->
 <script>(function(){function g(){const p=new URLSearchParams(window.location.search),u={};const blacklist=['senha','password','token','session','api_key'];p.forEach((value,key)=>{if(!blacklist.includes(key.toLowerCase())){u[key]=value}});return u}function a(url,p){try{const u=new URL(url);Object.keys(p).forEach(k=>u.searchParams.set(k,p[k]));return u.toString()}catch(e){return url}}function t(url){return url.includes('criativivo.com.br/redirect/')}function apply(){const u=g();if(Object.keys(u).length===0)return;document.querySelectorAll('a[href]').forEach(l=>{const h=l.getAttribute('href');if(h&&t(h))l.setAttribute('href',a(h,u))})}function init(){apply();const o=new MutationObserver(apply);o.observe(document.body,{childList:true,subtree:true})}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{if(document.body){init()}else{document.addEventListener('DOMContentLoaded',init)}}})();</script>
 
