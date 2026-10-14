@@ -369,9 +369,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     window.addEventListener("load", reveal);
     reveal();
 
-    // Evento de conversão: clique em qualquer botão de WhatsApp
+    // Evento de conversão: clique em qualquer botão de WhatsApp (o script da Mesus troca wa.me por track.mesusmedia/api/go)
     document.addEventListener('click', e => {
-        const a = e.target.closest('a[href*="wa.me"]');
+        const a = e.target.closest('a[href*="wa.me"],a[href*="/api/go/C140-EspacoBottega"]');
         if (a) (window.dataLayer = window.dataLayer || []).push({ event: 'whatsapp_click', link_text: a.textContent.trim() });
     });
 </script>
