@@ -917,6 +917,12 @@
     </div>
 
     <script>
+        // Evento de conversão: clique em qualquer botão de WhatsApp (delegado, vale pro carrossel clonado)
+        document.addEventListener('click', e => {
+            const a = e.target.closest('a[href*="wa.me"]');
+            if (a) (window.dataLayer = window.dataLayer || []).push({ event: 'whatsapp_click', link_text: a.textContent.trim() });
+        });
+
         let quizAnswers = { goal: '', obstacle: '', timeframe: '' };
 
         function nextQuizStep(step) {
@@ -957,6 +963,7 @@
             document.querySelectorAll('.quiz-step').forEach(el => el.classList.add('hidden'));
             document.getElementById('step-result').classList.remove('hidden');
 
+            (window.dataLayer = window.dataLayer || []).push({ event: 'quiz_complete' });
             document.getElementById('quiz-step-text').textContent = `Etapa Final`;
             document.getElementById('quiz-percent-text').textContent = `100% Concluído`;
             document.getElementById('quiz-progress-bar').style.width = `100%`;
